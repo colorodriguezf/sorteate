@@ -1,0 +1,71 @@
+body {
+    background-color: rgb(230, 180, 174);
+}
+h1 {
+    position: relative;
+    left: 13em;
+   color: red;
+
+}
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+    font-weight: bolder;
+    color: rgb(179, 35, 35);
+}
+button {
+    cursor:grab;
+    
+    height: 35px;
+    border-radius: 10px;
+    background-color: rgb(199, 117, 117);
+    box-shadow: 0px 3px rgb(116, 52, 52);
+}
+.contenedor {
+    display: inline-block;
+    margin-top: -1em;
+    margin-left: 16em;
+    border: solid 11px rgb(114, 46, 46);
+    width: 29.5em;
+    height: 30em;
+    background-color: rgb(223, 184, 200);
+}
+
+.sortear {
+    cursor:grab;
+    width: 35.4em;
+    height: 3em;
+    border-radius: 10px;
+    background-color: rgb(199, 117, 117);
+    box-shadow: 0px 3px rgb(116, 52, 52);
+}
+.sortear:active, button:active {
+    background-color: rgb(168, 81, 81);
+    transform: translateY(5px);
+  }
+.ganador {
+    position: sticky;
+    margin-top: 16em;
+}
+.resultado {
+
+    display: flex;
+    height: 2.5em;
+    font-weight:bolder;
+    font-size: larger;
+    font-size: 40px;
+    align-items: center;
+    justify-content: center;
+    border: solid 5px lightblue;
+    color: rgb(197, 194, 219);
+    background-color: rgb(9, 18, 46);
+    margin:0;
+}
+input {
+    padding: 2px;
+    width: 10em;
+    height: 2em;
+    border-radius: 10px;
+    background-color: rgb(206, 221, 226);
+
+}
