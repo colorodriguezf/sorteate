@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Sorteos</title>
+</head>
+<body>
+    <div>
+        <img src="img/logo_small.png" alt="">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="sorteoInstagram.html" rel="noopener noreferrer">Sorteo instagram</a></li>
+            <li><a href="sorteoNombres.html" rel="noopener noreferrer">Sorteo nombres</a></li>
+            <li><a href="sorteoMoneda.html" rel="noopener noreferrer">Sorteo moneda</a></li>
+        </ul>
+    </nav>
+    
+    <div class="contenedor">
+        <div class="sorteoInstagram">
+    Ingrese los  nombres 
+    <textarea id="nombre" type="text" placeholder="Ingresar nombre seguido de la tecla ENTER"></textarea>
+    <button id="btn-agregarNombre">Agregar</button>
+    <button id="btn-reset">Limpiar todos</button>
+    <label>Cantidad de ganadores:</label><select id="ganadores">
+        <option value="1">1</optio>
+        <option value="2">2</optio>
+        <option value="3">3</optio>
+        <option value="4">4</optio>
+        <option value="5">5</optio>
+    </select>
+    <!-- <button id="borrar-ultimo">Borrar Ultimo</button> -->
+    <button id="btn-sortear" class="sortear">Sortear</button>
+</div>
+    <ul id="listado"></ul>
+    <div class="ganador">
+           <p>El ganador es: </p>
+    <div id="ganador" class="resultado"></div>
+</div>
+
+</div>
+
+    <script src="js/javascript.js"></script>
+</body>
+</html>

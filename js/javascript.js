@@ -1,38 +1,48 @@
-document.querySelector("#btn-agregar").addEventListener("click", agregar);
-document.querySelector("#btn-reset").addEventListener("click", reset);
-// document.querySelector("#borrar-ultimo").addEventListener("click", borrarUltimo);
-document.querySelector("#btn-sortear").addEventListener("click", sortear);
+if (document.getElementById("btn-agregarUsuario")) {
+  document.getElementById("btn-agregarUsuario").addEventListener("click", agregarUsuario);
+} 
+if (document.getElementById("btn-agregarNombre")) {
+
+  document.getElementById("btn-agregarNombre").addEventListener("click", agregarNombre);
+}
+document.getElementById("btn-reset").addEventListener("click", reset);
+document.getElementById("btn-sortear").addEventListener("click", sortear);
 
 let nombres="";
 
-function agregar() {
+// SORTEO USUARIOS INSTAGRAM
+function agregarUsuario() {
   let nombre = document.getElementById("nombre").value;
   // nombres.push(nombre);
-  //PEDIR QUE EL PRIMERO SEA SIN @ HASTA PODER ARREGLAR ESE ERROR
- nombres = nombre.split('@');
-console.log(nombres); 
+  nombres = nombre.split('@');
+ nombres.splice(0,1);
+ console.log(nombres); 
+ mostrar();
+ //borro el valor del input
+ document.getElementById("nombre").value="";
+}
+function agregarNombre() {
+  let nombre = document.getElementById("nombre").value;
+  // nombres.push(nombre);
+ nombres = nombre.split(/\n/); 
+ console.log(nombres); 
   mostrar();
   //borro el valor del input
    document.getElementById("nombre").value="";
 }
-
 
 function reset() {
   nombres = [];
   mostrar(); 
 }
 
-// function borrarUltimo() {
-//   nombres.pop();
-//   mostrar();
-// }
 
 function mostrar() {
   let lista = document.getElementById("listado");
   lista.innerHTML = ""; //borro todo lo que haya
   for(const n of nombres){
     lista.innerHTML = lista.innerHTML + 
-      `<li> ${n} </li> <button class="borrarNombre" value=${n}>X</button>`;
+      `<li class="listaParticipantes"> ${n}<button class="borrarNombre" value=${n}>X</button></li>`;
   }
   let borrarNombre= document.querySelectorAll(".borrarNombre");
   for (const btn of borrarNombre) {
@@ -53,9 +63,27 @@ function eliminarNombre() {
 }
 
 function sortear() {
-  let n = Math.floor(Math.random()*nombres.length);
-  document.getElementById("ganador").innerHTML ="👑🥇"+ nombres[n];
+  let ganadores=[];
+  let total= document.getElementById("ganadores").value;
+  let listaGanadores= document.getElementById("ganador");
+  listaGanadores.innerHTML="";
+  console.log(total);
+  for (let i=0; i<total; i++) {
+    listaGanadores.innerHTML="";
+    let n = Math.floor(Math.random()*nombres.length);
+    ganadores.push(nombres[n]);
+    nombres.splice(n,1);
+    console.log(n);
+    console.log(ganadores);
+  }
+  for (const g of ganadores) {
+    listaGanadores.innerHTML = listaGanadores.innerHTML +
+    `<li class="listaGanadores">  ${g}</li>`;
+  }
+
 }
+
+// SORTEO NOMBRES:
 
 
 
