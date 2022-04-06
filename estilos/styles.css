@@ -31,7 +31,7 @@ nav ul li:hover {
     background-color:rgb(87, 87, 87);
 }
 
-h1 {
+.contenedor h1 {
     color: white;
     text-align: center;
     font-size: 2.5rem;
@@ -47,7 +47,7 @@ p {
     font-weight: bolder;
     color: rgb(179, 35, 35);
 }
-button {
+.btnAgregarYBorrar button {
     cursor:grab;
     height: 35px;
     width: 150px;
@@ -103,8 +103,11 @@ textarea {
     background-color: rgb(255, 255, 255);
 }
 #btn-agregarUsuario, #btn-reset {
-    width:130px;
+    width:140px;
     height:40px;
+    font-size: 1.1rem;
+    color:rgb(85, 61, 85);
+    font-weight: bold;
 }
 #ganadores {
     width: 70px;
@@ -112,10 +115,7 @@ textarea {
     font-weight: bold;
     text-align: center;
 }
-.listaGanadores {
-    display: flex;
-    flex-direction: column;
-}
+
 .btnAgregarYBorrar {
     margin-left:-80px;
 }
@@ -124,10 +124,13 @@ textarea {
     width: 250px;
     margin-left: 95px;
     margin-top: 35px;
-    height: 3.5em;
+    height: 2.5em;
+    font-size:1.3rem;
     border-radius: 10px;
     background-color: rgb(250, 236, 236);
     box-shadow: 0px 1px rgb(148, 145, 145);
+    color:rgb(85, 61, 85);
+    font-weight: bold;
 }
 .sortear:active, button:active {
     background-color:white; 
@@ -148,8 +151,11 @@ textarea {
 
 }
 .borrarNombre {
-    width: 70px;
-    margin-left: 30px;
+    border:none;
+    background-color:none !important;
+    width: auto;
+    margin-left: 20px;
+    padding:auto;
 }
 .resultado {
     height: 5.5em;
