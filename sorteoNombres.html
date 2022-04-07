@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/styles.css">
     <title>Sorteos</title>
 </head>
 <body>
@@ -21,30 +29,79 @@
         </ul>
     </nav>
     
-    <div class="contenedor">
+    <div class="contenedorNombres">
+        
+        <h1>Sorteo por Nombres al azar</h1>
+        <p class="subtitulo">Escoge un ganador al azar de una lista de nombres con nuestra App</p>
         <div class="sorteoInstagram">
-    Ingrese los  nombres 
-    <textarea id="nombre" type="text" placeholder="Ingresar nombre seguido de la tecla ENTER"></textarea>
-    <button id="btn-agregarNombre">Agregar</button>
-    <button id="btn-reset">Limpiar todos</button>
-    <label>Cantidad de ganadores:</label><select id="ganadores">
-        <option value="1">1</optio>
-        <option value="2">2</optio>
-        <option value="3">3</optio>
-        <option value="4">4</optio>
-        <option value="5">5</optio>
-    </select>
-    <!-- <button id="borrar-ultimo">Borrar Ultimo</button> -->
-    <button id="btn-sortear" class="sortear">Sortear</button>
-</div>
-    <ul id="listado"></ul>
-    <div class="ganador">
-           <p>El ganador es: </p>
-    <div id="ganador" class="resultado"></div>
+        <div class="contenedorLabelBotones">
+            <label class="participantes">Participantes:</label>
+            <div class="contenedorAreaYOpcionesNombres">
+                <div class="contenedorTextarea">
+                    <textarea class="textareaNombres" id="nombre" type="text"></textarea>
+                </div>
+                <div class="contenedorGanadores">
+                    <div>
+                        <label>Cantidad de ganadores:</label><select id="ganadores">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+
+                    </div>
+                    <div class="btnAgregarYBorrar">
+                        <button id="btn-resetNombres">Vaciar lista</button>
+                    </div>
+                    <!-- MODAL BOTON -->
+                            <button class="btn-agregarNombreySortear" type="button"  data-toggle="modal" data-target="#modalGanadores">Sortear</button>  
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+    
 </div>
 
-</div>
+<!-- MODAL GANADORES -->
+<div class="modal fade" id="modalGanadores" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="exampleModalLabel">GANADORES</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ol id="ganador" class="resultado"></ol>
+            </div>
+      </div>
+    </div>
+  </div>
 
-    <script src="js/javascript.js"></script>
+  <div class="comoFunciona">
+      
+      <h1>¿Como funciona?</h1>
+      <ol>
+          <li>Ingresa todos los nombres seguidos de un ENTER.
+              <br>Ej:<br> aa<br>bb<br>
+          </li>
+          <li>Selecciona la cantidad de ganadores que deseas para el sorteo.</li>
+          <li>Puedes vaciar la lista de nombres pulsando el boton <button class="btnEj">Vaciar lista</button></li>
+          <li>Por ultimo presionar el boton <button class="btnEj">Sortear</button> y listo. Se abrira una ventana mostrando los ganadores</li>
+      </ol>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/javascript.js"></script>
 </body>
 </html>
