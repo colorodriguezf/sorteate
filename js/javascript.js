@@ -17,7 +17,8 @@ function agregarUsuario() {
  nombres.splice(0,1);
  console.log(nombres); 
  mostrar();
- document.getElementById("btn-sortear").disabled=false;
+// DESACTIVADO PORQUE ROMPE EL MODAL
+//  document.querySelector(".btn-sortear").disabled=false;
 }
 function agregarNombre() {
   let nombre = document.getElementById("nombre").value;
@@ -65,7 +66,8 @@ function eliminarNombre() {
 
 function sortear() {
   let ganadores=[];
-  document.getElementById("btn-sortear").disabled=true;
+  // DESACTIVADO PORQUE ROMPE EL MODAL
+  // document.querySelector(".btn-sortear").disabled=true;
   let total= document.getElementById("ganadores").value;
   let listaGanadores= document.getElementById("ganador");
   listaGanadores.innerHTML="";
@@ -80,12 +82,14 @@ function sortear() {
   }
   for (const g of ganadores) {
     listaGanadores.innerHTML = listaGanadores.innerHTML +
-    `<li class="listaGanadores">  ${g}</li>`;
+    `<li class="listaGanadores">@${g}</li>`;
   }
 
 }
 
 // SORTEO NOMBRES:
+
+
 
 
 
