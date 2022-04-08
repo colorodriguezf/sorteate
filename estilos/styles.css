@@ -1,5 +1,5 @@
 body {
-    background-color: #fde0dc;
+    background-color: #f7ebe9;
     font-family: 'Roboto', sans-serif;
 }
 .logo {
@@ -257,17 +257,129 @@ font-size: 1.3rem;
     font-weight: bold;
 }
 /* SORTEO MONEDA */
-#imagen-cambiante {
+
+.tituloYsubMoneda {
+    margin:80px 0 0 0;
+    align-items:center;
+    text-align:center;
+}
+.tituloYsubMoneda h2 {
+font-size:3rem;
+font-weight: bolder;
+color:black;
+}
+.tituloYsubMoneda p {
+color:gray;
+font-weight: 100;
+font-size: 1.2rem;
+}
+
+.cardBox, .cardBox2 {
     display: flex;
-    margin-top:50px;
     justify-content: center;
+    font-size: 1.2em;
+    padding: 2% 0 0 1%;
+    perspective: 800px;
+    transition: all 0.3s ease 0s;
+  }
+  /* .cardBox:hover .card {
+    transform: rotateY(180deg);
+  } */
+  .card, .card2 {
+    display:none;
+    color:white;
+    cursor: default;
+    height: 200px;
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease 0s;
+    width: 20%;
+    -webkit-animation: giro 1s 1;
+    animation: giro 0.3s 10 linear;
+  }
+  .card .front,
+.card .back, .card2 .front2,
+.card2 .back2 {
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.8em;
+  height: 100%;
+  padding: 0.8em;
+  position: absolute;
+  width: 100%;
 }
 
-#img-cara{
-    height: 50vh;
-    width: 35%;   
+  .front {
+      background-color: red;
+      border-radius: 50%;
+  }
+  .back {
+      background-color:rgb(44, 63, 126);
+      border-radius: 50%;
+  }
+  .front2 {
+      background-color:rgb(44, 63, 126);
+      border-radius: 50%;
+    }
+    .back2 {
+    background-color: red !important;
+    border-radius: 50%;
+    }
+ 
+  
+  .card .back, .card2 .back2  {
+    transform: rotateY( 180deg);
+  }
+  @-webkit-keyframes giro {
+    from {
+      transform: rotateY( 380deg);
+    }
+    to {
+      transform: rotateY( 180deg);
+    }
+  }
+  
+  @keyframes giro {
+    from {
+      transform: rotateY( 180deg);
+    }
+    to {
+      transform: rotateY( 0deg);
+    }
+  }
+  .contenedorTirarMoneda {
+      display:flex;
+      justify-content:center
 }
+#tirarMoneda {
+    border-radius: 10px;
+     position: absolute;
+     top:80vh;
+      width:170px;
+      height:50px;
+      background-color: #c48a8a;
+      color: rgb(255, 255, 255);
+      margin-top:10px;
+      /* margin-left:-240px; */
+  }
+  #tirarMoneda:active{
+      background-color: rgb(129, 77, 77);
+  }
+ 
 
-#imagen-cambiante:hover {
-    background: src("img\monedaCRUZ.png");
-}
+
+
+
+
+
+
+
+
+
+
+  
