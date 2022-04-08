@@ -116,25 +116,23 @@ document.getElementById("tirarMoneda").addEventListener("click", girarMoneda);
 
 function girarMoneda() {
   let moneda =["cara","cruz"];
-  let rotacion="";
+  let salio="";
   let n = Math.floor(Math.random()*moneda.length);
   
   if (n == 0) {
-    rotacion="cara";
+    salio="cara";
     document.querySelector(".card").style.display="flex";
     document.querySelector(".cardBox2").style.display="none";
+    
 
   }
   else {
-    rotacion="cruz";
+    salio="cruz";
     document.querySelector(".card2").style.display="flex";
     document.querySelector(".cardBox").style.display="none";
-    // document.querySelector(".front").style.display="none";
-    // document.querySelector(".back").style.display="none";
-    // document.querySelector(".back2").style.display="flex";
-    // document.querySelector(".front2").style.display="flex";
   }
-  console.log(rotacion);
+  
+  console.log(salio);
 
 }
 
