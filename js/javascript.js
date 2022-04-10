@@ -112,7 +112,9 @@ function sortear() {
 }
 
 // TIRAR MONEDA
-document.getElementById("tirarMoneda").addEventListener("click", girarMoneda);
+if (document.getElementById("tirarMoneda")) {
+  document.getElementById("tirarMoneda").addEventListener("click", girarMoneda);
+}
 
 function girarMoneda() {
   let moneda =["cara","cruz"];
