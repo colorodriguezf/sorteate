@@ -5,6 +5,10 @@ if (document.querySelector(".btn-agregarNombreySortear")) {
 
   document.querySelector(".btn-agregarNombreySortear").addEventListener("click", agregarNombreYSortear);
 }
+if (document.querySelector(".btn-agregarNombreyGenerar")) {
+
+  document.querySelector(".btn-agregarNombreyGenerar").addEventListener("click", agregarNombreyGenerar);
+}
 if (document.querySelector(".btn-reset")) {
   document.getElementById("btn-reset").addEventListener("click", reset);
 }
@@ -135,6 +139,35 @@ function girarMoneda() {
   }
   
   console.log(salio);
+
+}
+
+//Sortear equipos:
+function agregarNombreyGenerar () {
+  
+  let nombre = document.getElementById("nombre").value;
+  nombres = nombre.split(/\n/); 
+  console.log(nombres);
+  let totalEquipos= document.getElementById("equipos").value;
+  equipos = [];
+  for(let i = 0; i < nombres.length; i++) {
+    nombres = nombres.sort(function(){
+      return Math.random() - 0.5;
+    })
+  }
+    const LONGITUD_PEDAZOS = nombres.length/totalEquipos;
+    
+    for (let i = 0; i < nombres.length; i += LONGITUD_PEDAZOS) {
+    let pedazo = nombres.slice(i, i + LONGITUD_PEDAZOS);
+    equipos.push(pedazo);
+  }
+  let listaEquipos= document.getElementById("listaEquipos");
+  listaEquipos.innerHTML = "";
+  for (const equipo of equipos) {
+    listaEquipos.innerHTML = listaEquipos.innerHTML +
+    `<li class="listaGanadoresNombres">${equipo}</li>`;
+  }
+  nombres = [];
 
 }
 
