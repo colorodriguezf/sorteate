@@ -6,17 +6,28 @@ body {
 
 @media only screen and (max-width:440px) {
     .logo {
-        width: 100%;
+        width: 49%;
+        height: 82px;
     }
-    nav {
-        height:60px;
-        width: 100%;
-        background-color:rgb(54, 53, 53);
-    }
+    /* nav {
+        background-color: rgb(10, 145, 171);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    } */
     nav ul {
-        display:flex;
-        justify-content: space-around;
-        height:50px;
+      display: none;
+    }
+    .show ul {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        height: 100vh;
+        gap: 70px;
+    }
+    .contenedor_logo {
+        text-align: center;
+        align-items: center;
     }
     nav ul li {
         list-style: none;
@@ -35,6 +46,20 @@ body {
         background-color:rgb(87, 87, 87);
     }
     
+    .nav__toggle {
+        color: yellow;
+        font-size: 1.5rem;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        top: 27px;
+      }
+      .show {
+        right: 0;
+        height: 100vh;
+    }
+    
+
     .contenedor h1 {
         color: white;
         text-align: center;
@@ -88,7 +113,7 @@ body {
     height:60px;
     border-radius:5px;
     font-size: 1.3rem;
-    padding:10px 0 10px 10px;
+    padding:15px;
     margin:30px 0 0 30px;
     }
     .contenedorSorteos div a {
@@ -469,37 +494,55 @@ body {
       }
 }
 /* -------------------------------------------------------------------- */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 440px) {
 
     .logo {
-        width: 18%;
+        width: 30%;
     }
-    nav {
-        height:50px;
+    /* nav {
         width: 100%;
-        background-color:rgb(54, 53, 53);
+        background-color: rgb(10, 145, 171);
+        display: flex;
+        align-items: center;
+    } */
+    .nav__menu {
+        width: 100%;
     }
     nav ul {
         display:flex;
-        justify-content: space-around;
+        justify-content: center;
         height:50px;
+    }
+    .contenedor_logo {
+        margin-left: 100px;
+        width: 28%;
+    }
+    .contenedor_logo a {
+        display: block;
     }
     nav ul li {
         list-style: none;
         color: white;
         font-weight: bolder;
-        font-size: 1.5rem;
+        font-size: 1rem;
         display: flex;
         justify-content:center;
         align-items:center;
-        width:33.3%;
+        width:100%;
     }
     nav ul li a {
-       text-decoration: none;
-       color:white;
+        color: white;
+    text-decoration: none;
     }
-    nav ul li:hover {
-        background-color:rgb(87, 87, 87);
+    nav ul li a:hover, nav ul li a:focus {
+        color: white;
+        text-decoration: none;
+        padding-bottom: 3px;
+        border-bottom: 3px solid red;
+    }
+  
+    .nav__toggle {
+        display: none;
     }
     
     .contenedor h1 {
@@ -568,7 +611,6 @@ body {
     }
     .contenedorSorteos button {
         border-radius: 8px;
-        height:100%;
     }
     
     .svgIg {
@@ -619,7 +661,18 @@ body {
         background-color:rgba(209, 248, 150, 0.616);
     }
     
-    
+    .info {
+        border: none;
+        background: none;
+    }
+    .info:hover {
+        background: none;
+        transform: scale(1.1);
+    }
+    .info svg {
+        width: 18px;
+        height:30px;
+    }
     
     /* SORTEO INSTAGRAM */
     .contenedor {

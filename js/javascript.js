@@ -19,6 +19,19 @@ if (document.getElementById("btn-resetNombres")) {
   document.getElementById("btn-resetNombres").addEventListener("click", vaciarNombres)
 }
 
+/*===== MENU SHOW =====*/ 
+const showMenu = (toggleId, navId) =>{
+  const toggle = document.getElementById(toggleId),
+  nav = document.getElementById(navId);
+  if(toggle && nav){
+    console.log("ASAS");
+      toggle.addEventListener('click', ()=>{
+          nav.classList.toggle('show');
+      })
+  }
+}
+showMenu('nav-toggle','nav-menu');
+
 let nombres="";
 
 // SORTEO USUARIOS INSTAGRAM
@@ -176,3 +189,14 @@ function agregarNombreyGenerar () {
 
 
 
+
+var linkClicked = document.getElementsByClassName('nav-link');
+var numClass = linkClicked.length;
+
+for (var i = 0; i < numClass; i++) {
+    linkClicked[i].addEventListener('click', function(){
+      var onTheMoment = document.getElementsByClassName('active');
+      onTheMoment[0].className = onTheMoment[0].className.replace(' active', '');
+      this.className += ' active';
+    }, false);
+  }

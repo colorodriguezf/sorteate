@@ -1,0 +1,120 @@
+
+.contenedor-redes div a {
+    text-decoration: none;
+    color: rgb(247, 244, 244);
+  }
+  footer {
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 1rem;
+    padding-top: 4rem;
+    border-top: solid 0.1px gray;
+    display: flex;
+    justify-content: space-around;
+    color: rgb(0, 0, 0);
+    align-items: center;
+    margin-top: 50px;
+    gap: 20px;
+  }
+
+  footer div h4 {
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+}
+  .contenedor-redes div a svg {
+    color: black;
+}
+.contenedor-redes:hover {
+    cursor: pointer;
+    font-weight: bold;
+ }
+ .contenedor-redes div {
+    padding: 6px;
+    border-radius: 5px;
+    color: black;
+}
+@media only screen and (max-width:991px) {
+    /*  */
+    .navbar-nav {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        gap:30px;
+        font-size: 1.8rem;
+    }
+    .navbar-nav div {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+    .navbar-toggler {
+        border: none;
+    }
+    .navbar-toggler:active {
+        border: none !important;
+    }
+
+    footer div {
+        align-items: center;
+    }
+    footer div p {
+        color: grey;
+        font-size: 0.7rem;
+    }
+    .contenedor-redes {
+        display: flex;
+        gap: 10px;
+    }
+    .contenedor-redes div {
+        padding: 6px;
+        border-radius: 5px;
+    }
+    .contenedor-redes:hover {
+       cursor: pointer;
+       font-weight: bold;
+    }
+    .contenedor-redes div a {
+      text-decoration: none;
+      color: white;
+    }
+    
+}
+  /*  */
+    
+
+@media only screen and (min-width: 992px){
+    .collapse{
+        justify-content: center;
+    }
+    .navbar-nav {
+        gap: 40px;
+    }
+    .navbar-nav div {
+        display: flex;
+        align-items: center;
+    }
+    .navbar-nav a:after{
+        content: '';
+        display: block;
+        height: 1.5px;
+        background: #FBC02D;
+        transform: scaleX(0);
+        transition: transform .3s;
+    }
+    .navbar-nav a:hover:after{
+        transform: scaleX(1);
+        transition: transform .3s;
+    }
+ 
+    footer div {
+        align-items: center;
+    }
+    footer div p {
+        color: grey;
+    }
+    .contenedor-redes {
+        display: flex;
+        gap: 30px;
+    }
+
+}

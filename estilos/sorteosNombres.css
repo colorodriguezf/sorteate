@@ -1,0 +1,262 @@
+
+*, ::after, ::before {
+    box-sizing: border-box;
+    font-family: inter,sans-serif;
+}
+
+  .contenedor-app {
+    /* padding: 10px; */
+    display: flex;
+    height: 85vh;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(180deg,#FFFFFF 59%,#DEDDF8 100%);
+    background-image: linear-gradient(180deg,#FFFFFF 30%,rgba(222,221,248,.36) 100%);
+    background-image: linear-gradient(180deg,#FFFFFF 30%,#E9E9F7 100%);
+    background-image: linear-gradient(180deg,#FFFFFF 0%,#FFFFFF 200px,#E9E9F7 1000px);
+    background-color: #fff;
+}
+
+
+.curve {
+  position: relative;
+  bottom: 32px;
+  width: 100%;
+}
+.contenedor-text {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.contenedor-nombre-sorteo {
+  display: flex;
+}
+
+
+.contenedor-svg {
+    border-radius: 7px;
+    padding:7px;
+    color: rgb(147, 35, 147);
+    font-weight: bold;
+    background-color: rgb(231, 220, 106);
+    display: inline-block;
+    width: fit-content;    
+}
+.h1Sorteo {
+    font-weight: bold;
+    font-size: 2.2rem;
+}
+.info {
+  border: none;
+  background: none;
+  color: black;
+}
+.info:hover, .info:active {
+  color: black;
+  background: none;
+  transform: scale(1.2);
+}
+.info svg {
+  width: 18px;
+  height:30px;
+}
+.subtitulo {
+    font-size: 1.1rem;
+    color: #6e6d81;
+}
+.contenedor-label-participantes {
+    display: flex;
+    float: left;
+    position: relative;
+    right: 220px;
+}
+.textarea-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }  
+  textarea {
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    padding: 1px;
+    resize: none;
+    border: 1px solid #ccc;
+    resize: none;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    padding-left: 10px;
+    padding-top: 4px;
+}
+
+textarea:focus {
+   border: solid 2px #ff0505;
+  }  
+  
+  .counter-container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: none;
+    border:none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  #counter {
+    font-size: 1rem;
+    font-weight: bolder;
+    color: #eb2b2b;
+  }
+
+  #countdown {
+    font-size:15rem;
+    animation: fade 0.9s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  @keyframes fade {
+    0% {
+      opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+        
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+
+
+.modal-dialog {
+  top: 25%;
+}
+
+.btn-agregarNombreySortear {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #d31c92;
+    color: white;
+}
+.btn-agregarNombreySortear:disabled {
+  background: #f4d2d2;
+  color:rgb(181, 181, 181);
+}
+
+.contenedor-label-vaciar {
+  display: flex;
+  justify-content: space-between;
+}
+
+#btn-resetNombres {
+  border: none;
+  border-radius: 50%;
+  padding: 1px;
+  background-color: rgb(226, 190, 190);
+  color: white;
+}
+
+
+#btn-resetNombres svg {
+  width: 20px;
+  height: 20px;
+}
+
+.contenedor-ganadores-sortear {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+.contenedor-label {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+select {
+  height:40px;
+}
+
+.comoFunciona {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.comoFunciona h1 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+.comoFunciona ol {
+  font-size: 1rem;
+}
+.curve {
+  bottom: 17px;
+}
+
+.modal-content {
+  height: 30vh;
+  width: 80%;
+  margin-left: 10%;
+}
+#ganador {
+  margin-top:0;
+}
+/* } */
+
+@media only screen and (min-width:575px) {
+  .nav-menu {
+    display: none;
+  }
+  .nav__menu {
+    display: flex;
+  }
+  textarea {
+    width: 350px;
+  }
+  .contenedor-ganadores-sortear{
+    gap: 40px;
+  }
+  .btn-agregarNombreySortear {
+    padding: 10px 20px 10px 20px;
+  }
+} 
+
+@media only screen and (min-width:1000px) {
+  .h1Sorteo {
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-top: 10px;
+}
+  textarea {
+    width: 500px;
+  }
+  .comoFunciona h1 {
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+  .comoFunciona ol {
+    font-size: 1.2rem;
+  }
+  .contenedor-text {
+    margin-top: 80px;
+    text-align: center;
+  }
+  .curve {
+    bottom: 27px;
+  }
+  ul li {
+    margin-top: 10px;
+    letter-spacing: 0.2px;
+    font-size: 1.2rem;
+  }
+}
+
+
