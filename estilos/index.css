@@ -1,0 +1,133 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+    font-family: inter,sans-serif;
+}
+button {
+border:none;
+background-color: white;
+}
+.contenedorIndexh1p {
+    text-align: center;
+    margin-top: 30px;
+}
+.contenedorIndexh1p h2 {
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 0.5rem;
+}
+.contenedorIndexh1p p {
+    font-size: 12px;
+}
+.list-group{
+    display:grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    gap: 40px;
+}
+.list-group-item {
+    border: 1px solid #e8e8e8;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #fafafa;
+}
+.list-group-item:hover {
+    background-color: #f1f7ff;
+}
+.list-group-item a {
+    text-decoration:none;
+    color: black;
+}
+.container_list {
+    display: flex;
+    padding:10px 0px 10px 0px;
+}
+.container_list button {
+    display: flex;
+    background: none;
+    margin-right: 10px;
+}
+.container_h2_p {
+    width: auto;
+}
+a h2 {
+    font-size:16px;
+    font-weight: bold;
+}
+a p {
+    font-size:14px;
+}
+
+.contenedor_svg {
+    padding:2px;
+    border-radius: 10px;
+    width: 40px;
+}
+.contenedor_svg svg {
+    width: 24px;
+}
+.svg_ig {
+    background-color:#f5e5ec ;
+    color: #d93175;
+}
+.svg_nombres {
+    background-color: #ffda0336;
+    color: #b77508;
+}
+.svg_moneda {
+    background-color: rgb(247, 243, 131);
+    color: rgb(120, 126, 2);
+}
+.svg_equipos {
+    background-color:rgb(207, 244, 168);
+    color: rgb(35, 88, 202);
+}
+.svg_ruleta {
+    background-color:rgb(139, 196, 246);
+    color: grey;
+}
+
+@media only screen and (min-width: 500px) {
+    .list-group{
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+        margin: auto;
+        margin-top: 60px;
+        gap: 20px;
+    }
+    a h2 {
+        font-size:16px;
+        font-weight: bold;
+    }
+    a p {
+        font-size:12px;
+    }
+    .contenedor_svg {
+        padding:2px 0px 2px 0px;
+        border-radius: 10px;
+        width: 40px;
+    }
+    .contenedor_svg svg {
+        width: 20px;
+    }
+}
+@media only screen and (min-width: 900px) {
+    .list-group{
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 70%;
+        margin: auto;
+        margin-top: 60px;
+        gap: 20px;
+    }
+    a h2 {
+        font-size:12px;
+        font-weight: bold;
+    }
+    a p {
+        font-size:10px;
+    }
+}
+
