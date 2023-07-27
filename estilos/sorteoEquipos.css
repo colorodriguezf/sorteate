@@ -217,6 +217,11 @@ select {
     word-wrap: break-word;
     text-transform: uppercase;
 }
+
+.listaEquipos {
+  margin:10px;
+  padding: 10px;
+}
 /* } */
 
 @media only screen and (min-width:575px) {

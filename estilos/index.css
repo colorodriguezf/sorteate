@@ -35,7 +35,7 @@ background-color: white;
 .list-group-item:hover {
     background-color: #f1f7ff;
 }
-.list-group-item a {
+ul a, ul a:hover {
     text-decoration:none;
     color: black;
 }
