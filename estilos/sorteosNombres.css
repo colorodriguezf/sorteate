@@ -240,6 +240,7 @@ select {
   }
   .contenedor-app {
     height: 100%;
+    padding-bottom: 10vh;
   }
   .comoFunciona h1 {
     font-weight: bold;
